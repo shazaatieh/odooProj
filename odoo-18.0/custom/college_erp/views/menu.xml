@@ -1,0 +1,19 @@
+<odoo>
+    <menuitem id="college_erp_main_menu" name="College ERP" sequence="2"/>
+
+    <menuitem id="college_erp_student_menu" name="Students"
+              parent="college_erp_main_menu"
+              action="action_college_student"/>
+
+    <!-- Action to open the custom search page -->
+    <record id="action_student_search_page" model="ir.actions.act_url">
+        <field name="name">Search Students</field>
+        <field name="url">/college/student/search</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Submenu for the custom search page -->
+    <menuitem id="college_erp_student_search_menu" name="Search Students"
+              parent="college_erp_main_menu"
+              action="action_student_search_page"/>
+</odoo>

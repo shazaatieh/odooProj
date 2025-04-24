@@ -1,0 +1,17 @@
+<odoo>
+    <!-- Main menu item under Website -->
+    <menuitem id="menu_website_section" name="Sections"
+
+              action="action_website_section"
+              sequence="1"/>
+
+    <!-- Submenu: Banners -->
+    <menuitem id="menu_website_banner" name="Banners"
+              parent="menu_website_section"
+              action="action_website_banner" sequence="2"/>
+
+    <!-- Submenu: Banner Items -->
+    <menuitem id="menu_website_banner_item" name="Banner Items"
+              parent="menu_website_section"
+              action="action_website_banner_item" sequence="3"/>
+</odoo>

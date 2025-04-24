@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_section_user,website.section.user,model_website_section,base.group_user,1,1,1,1
+access_website_banner,access_website_banner,model_website_banner,base.group_user,1,1,1,1
+access_website_banner_item,access_website_banner_item,model_website_banner_item,base.group_user,1,1,1,1
+

@@ -1,0 +1,32 @@
+<odoo>
+    <template id="student_report_template">
+        <t t-call="web.basic_layout">
+            <div class="container">
+                <h2>Student Report</h2>
+                <div class="row">
+                    <div class="col-6">
+                         <!-- Debugging the base64 string
+                        <img t-att-src="'data:image/png;base64,' + (student.image_1920 and student.image_1920.decode('utf-8') or '') if student.image_1920 else '/college_erp/static/img/default_profile.png'"
+     style="max-height: 120px; border-radius: 10px; border: 2px solid #ddd; padding: 5px;" />
+     -->
+
+                        <!-- Displaying the image -->
+                       <img t-att-src="'data:image/png;base64,' + (student.image_1920 and student.image_1920.decode('utf-8') or '') if student.image_1920 else '/college_erp/static/img/default_profile.png'"
+     style="max-height: 120px; border-radius: 10px; border: 2px solid #ddd; padding: 5px;" />
+
+
+                    </div>
+                    <div class="col-6">
+                        <h3 t-esc="student.name" />
+                        <p><strong>Roll Number:</strong> <span t-esc="student.roll_number" /></p>
+                        <p><strong>Email:</strong> <span t-esc="student.email" /></p>
+                        <p><strong>Phone:</strong> <span t-esc="student.phone" /></p>
+                        <p><strong>Date of Birth:</strong> <span t-esc="student.date_of_birth" /></p>
+                        <p><strong>Course:</strong> <span t-esc="student.course" /></p>
+                        <p><strong>Status:</strong> <span t-esc="student.state" /></p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

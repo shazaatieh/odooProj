@@ -1,0 +1,7 @@
+<odoo>
+    <template id="homepage_inherit" inherit_id="website.homepage">
+        <xpath expr="//div[@id='wrap']" position="inside">
+            <t t-call="sections.hero_section_template" t-set="sections" t-value="request.env['website.section'].search([('active','=',True)])"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,19 @@
+<!-- views/website_templates.xml -->
+<odoo>
+    <template id="hero_section_template" name="Hero Section Template">
+        <t t-foreach="sections" t-as="section">
+            <div class="hero-section type-{{ section.section_type }}">
+                <t t-foreach="section.banner_ids" t-as="banner">
+                    <div class="banner">
+                        <t t-foreach="banner.item_ids" t-as="item">
+                            <div class="banner-item">
+                                <img t-att-src="'/web/image/website.banner.item/' + str(item.id) + '/image'" t-att-alt="item.title"/>
+                                <h4><a t-att-href="item.link_url"><t t-esc="item.title"/></a></h4>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>
